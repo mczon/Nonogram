@@ -3,11 +3,11 @@ package mkc.guicomponents;
 import org.controlsfx.dialog.WizardPane;
 
 import javafx.beans.value.ChangeListener;
-import mkc.model.NonogramBoardSizeSettings;
+import mkc.model.GameBoardSizeSettings;
 
 public class SetSizePane extends WizardPane {
 
-    private final NonogramBoardSizeSettings sizeSettings = new NonogramBoardSizeSettings();
+    private final GameBoardSizeSettings mSizeSettings = new GameBoardSizeSettings();
     private final NumberTextField mNumberOfColumns;
     private final NumberTextField mNumberOfRows;
 
@@ -18,15 +18,19 @@ public class SetSizePane extends WizardPane {
         mNumberOfColumns.focusedProperty().addListener(
                 (ChangeListener<Boolean>) (observable, oldValue, newValue) -> {
                     if (newValue) {
-                        sizeSettings.setNumberOfColumns(mNumberOfColumns.getValue());
+                        mSizeSettings.setNumberOfColumns(mNumberOfColumns.getValue());
                     }
                 });
 
         mNumberOfRows.focusedProperty().addListener(
                 (ChangeListener<Boolean>) (observable, oldValue, newValue) -> {
                     if (newValue) {
-                        sizeSettings.setNumberOfRows(mNumberOfRows.getValue());
+                        mSizeSettings.setNumberOfRows(mNumberOfRows.getValue());
                     }
                 });
+    }
+
+    public GameBoardSizeSettings getSizeSettings() {
+    	return mSizeSettings;
     }
 }

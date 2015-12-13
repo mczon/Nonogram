@@ -1,13 +1,13 @@
 package mkc.model;
 
-public class NonogramBoardSizeSettings {
+public class GameBoardSizeSettings {
     private int mNumberOfRows;
     private int mNumberOfColumns;
 
-    public NonogramBoardSizeSettings() {
+    public GameBoardSizeSettings() {
     }
 
-    public NonogramBoardSizeSettings(int nrOfColumns, int nrOfRows) {
+    public GameBoardSizeSettings(int nrOfColumns, int nrOfRows) {
         mNumberOfRows = nrOfColumns;
         mNumberOfRows = nrOfRows;
     }

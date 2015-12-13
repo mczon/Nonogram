@@ -5,14 +5,14 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import mkc.guicomponents.NumberTextField;
-import mkc.model.NonogramBoardSizeSettings;
+import mkc.model.GameBoardSizeSettings;
 
 public class RowsAndColumnsDialog {
 
     static NumberTextField sNumberOfRows;
     static NumberTextField sNumberOfColumns;
 
-    public static NonogramBoardSizeSettings display() {
+    public static GameBoardSizeSettings display() {
         final Label rowsLabel = new Label("Rows:");
         final Label columnsLabel = new Label("Columns:");
 
@@ -31,8 +31,8 @@ public class RowsAndColumnsDialog {
         dialog.setResizable(true);
         dialog.showAndWait();
 
-        final NonogramBoardSizeSettings settings =
-                new NonogramBoardSizeSettings(sNumberOfColumns.getValue(),
+        final GameBoardSizeSettings settings =
+                new GameBoardSizeSettings(sNumberOfColumns.getValue(),
                         sNumberOfRows.getValue());
 
         return settings;

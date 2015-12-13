@@ -3,7 +3,7 @@ package mkc.dialog;
 import org.controlsfx.dialog.Wizard;
 
 import mkc.model.NonogramBoard;
-import mkc.model.NonogramBoardSizeSettings;
+import mkc.model.GameBoardSizeSettings;
 
 public class NewGameDialog {
 
@@ -14,7 +14,7 @@ public class NewGameDialog {
     }
 
     private static void initialize() {
-        final NonogramBoardSizeSettings sizeSettings = RowsAndColumnsDialog.display();
+        final GameBoardSizeSettings sizeSettings = RowsAndColumnsDialog.display();
 
         final Wizard wizard = new Wizard();
     }
