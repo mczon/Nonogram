@@ -1,4 +1,4 @@
-package mkc.guicomponents;
+package main.java.mkc.guicomponents;
 
 import java.util.Optional;
 

@@ -1,4 +1,4 @@
-package mkc.dialog;
+package main.java.mkc.dialog;
 import java.io.File;
 
 import javafx.geometry.Pos;
@@ -9,10 +9,10 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
 import javafx.stage.FileChooser.ExtensionFilter;
+import main.java.mkc.model.NonogramBoard;
+import main.java.mkc.util.FileUtils;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import mkc.model.NonogramBoard;
-import mkc.util.FileUtils;
 
 public class StartDialog {
 

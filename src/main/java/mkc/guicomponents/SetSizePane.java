@@ -1,11 +1,11 @@
-package mkc.guicomponents;
+package main.java.mkc.guicomponents;
 
 import org.controlsfx.dialog.WizardPane;
 
 import javafx.beans.value.ChangeListener;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
-import mkc.model.GameBoardSizeSettings;
+import main.java.mkc.model.GameBoardSizeSettings;
 
 public class SetSizePane extends WizardPane {
 

@@ -1,4 +1,4 @@
-package mkc.util;
+package main.java.mkc.util;
 
 import java.io.File;
 
@@ -6,8 +6,8 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 
-import mkc.dialog.ErrorDialog;
-import mkc.model.NonogramBoard;
+import main.java.mkc.dialog.ErrorDialog;
+import main.java.mkc.model.NonogramBoard;
 
 public class FileUtils {
 

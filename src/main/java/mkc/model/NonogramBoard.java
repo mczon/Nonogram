@@ -1,4 +1,4 @@
-package mkc.model;
+package main.java.mkc.model;
 
 import java.util.List;
 

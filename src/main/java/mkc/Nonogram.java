@@ -1,4 +1,4 @@
-package mkc;
+package main.java.mkc;
 
 import java.net.URL;
 
@@ -6,8 +6,8 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
-import mkc.dialog.StartDialog;
-import mkc.model.NonogramBoard;
+import main.java.mkc.dialog.StartDialog;
+import main.java.mkc.model.NonogramBoard;
 
 public class Nonogram  extends Application {
 

@@ -1,4 +1,4 @@
-package mkc.model;
+package main.java.mkc.model;
 
 public class GameBoardSizeSettings {
     private int mNumberOfRows;

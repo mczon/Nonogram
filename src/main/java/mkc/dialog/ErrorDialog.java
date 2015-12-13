@@ -1,4 +1,4 @@
-package mkc.dialog;
+package main.java.mkc.dialog;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;

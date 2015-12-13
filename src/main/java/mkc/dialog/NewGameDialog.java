@@ -1,10 +1,10 @@
-package mkc.dialog;
+package main.java.mkc.dialog;
 
 import org.controlsfx.dialog.Wizard;
 
 import javafx.scene.control.ButtonType;
-import mkc.guicomponents.GameBoardWizardFlow;
-import mkc.model.NonogramBoard;
+import main.java.mkc.guicomponents.GameBoardWizardFlow;
+import main.java.mkc.model.NonogramBoard;
 
 public class NewGameDialog {
 
