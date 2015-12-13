@@ -67,13 +67,14 @@ public class StartDialog {
 
         mNewGameButton = new Button(NEW_GAME);
         mNewGameButton.setAlignment(Pos.CENTER);
-        mNewGameButton.setDisable(true);
-        //        mNewGameButton.setOnAction(event -> {
-        //            NewGameDialog.displa();
-        //            event.consume();
-        //            mDialog.close();
-        //
-        //        });
+        mNewGameButton.setOnAction(event -> {
+            mGameBoard = NewGameDialog.display();
+            if (mGameBoard != null) {
+                event.consume();
+                mDialog.close();
+            }
+
+        });
 
         mQuit = new Button(QUIT);
         mQuit.setAlignment(Pos.CENTER);
