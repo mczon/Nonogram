@@ -1,19 +1,13 @@
 package mkc.model;
 
-import java.io.File;
 import java.util.List;
 
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.Marshaller;
-import javax.xml.bind.Unmarshaller;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 import javax.xml.bind.annotation.XmlValue;
 
 import com.google.common.collect.Lists;
-
-import mkc.dialog.ErrorDialog;
 
 @XmlRootElement(name="Nonogram")
 public class NonogramBoard {

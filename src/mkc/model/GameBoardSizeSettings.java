@@ -28,4 +28,8 @@ public class GameBoardSizeSettings {
         mNumberOfRows = numberOfRows;
     }
 
+    public boolean equals(GameBoardSizeSettings other) {
+        return mNumberOfColumns == other.getNumberOfColumns() &&
+                mNumberOfRows == other.getNumberOfRows();
+    }
 }
