@@ -1,5 +1,7 @@
 package mkc;
 
+import java.net.URL;
+
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
@@ -25,7 +27,10 @@ public class Nonogram  extends Application {
 
         mWindowPain = new BorderPane();
 
-        mMainWindow.setScene(new Scene(mWindowPain, 1200, 800));
+        final Scene scene = new Scene(mWindowPain, 1200, 800);
+        final URL resource = this.getClass().getResource("../resources/css/tableStyleSheet.css");
+        scene.getStylesheets().add(resource.getPath());
+        mMainWindow.setScene(scene);
         mMainWindow.show();
 
         final NonogramBoard gameBoard = StartDialog.display();
