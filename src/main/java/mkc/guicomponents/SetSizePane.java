@@ -1,49 +1,39 @@
 package main.java.mkc.guicomponents;
 
+import org.controlsfx.dialog.Wizard;
 import org.controlsfx.dialog.WizardPane;
 
-import javafx.beans.value.ChangeListener;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
-import main.java.mkc.model.GameBoardSizeSettings;
+import main.java.mkc.model.GameBoardWizard;
 
 public class SetSizePane extends WizardPane {
 
-    private final GameBoardSizeSettings mSizeSettings = new GameBoardSizeSettings();
-    private final NumberTextField mNumberOfColumns;
-    private final NumberTextField mNumberOfRows;
+    private final NumberTextField mColumnsField;
+    private final NumberTextField mRowsField;
 
     public SetSizePane() {
-        mNumberOfColumns = new NumberTextField(1, false);
-        mNumberOfRows = new NumberTextField(1, false);
-
-        mNumberOfColumns.focusedProperty().addListener(
-                (ChangeListener<Boolean>) (observable, oldValue, newValue) -> {
-                    if (newValue) {
-                        mSizeSettings.setNumberOfColumns(mNumberOfColumns.getValue());
-                    }
-                });
-
-        mNumberOfRows.focusedProperty().addListener(
-                (ChangeListener<Boolean>) (observable, oldValue, newValue) -> {
-                    if (newValue) {
-                        mSizeSettings.setNumberOfRows(mNumberOfRows.getValue());
-                    }
-                });
+        mColumnsField = new NumberTextField(1, false);
+        mRowsField = new NumberTextField(1, false);
 
         final Label columnsLabel = new Label("Number of columns:");
         final Label rowsLabel = new Label("Number of rows:");
 
         final GridPane grid = new GridPane();
         grid.add(columnsLabel, 0, 0);
-        grid.add(mNumberOfColumns, 1, 0);
+        grid.add(mColumnsField, 1, 0);
         grid.add(rowsLabel, 0, 1);
-        grid.add(mNumberOfRows, 1, 1);
+        grid.add(mRowsField, 1, 1);
 
         setContent(grid);
     }
 
-    public GameBoardSizeSettings getSizeSettings() {
-        return mSizeSettings;
+    @Override
+    public void onExitingPage(Wizard wizard) {
+        super.onExitingPage(wizard);
+
+        final GameBoardWizard gbw = ((GameBoardWizard)wizard);
+        gbw.setColumns(mColumnsField.getValue());
+        gbw.setRows(mRowsField.getValue());
     }
 }
