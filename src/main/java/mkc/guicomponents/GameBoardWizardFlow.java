@@ -17,10 +17,8 @@ public class GameBoardWizardFlow implements Wizard.Flow {
         if (currentPage == null) {
             pane = mPage1;
         } else if (currentPage instanceof SetSizePane) {
-            mPage2.setSizeSettings(mPage1.getSizeSettings());
             pane = mPage2;
         } else if (currentPage instanceof SetPatternPane) {
-            mPage3.setSizeSettings(mPage1.getSizeSettings());
             pane = mPage3;
         } else {
             // Shouldnt happen
