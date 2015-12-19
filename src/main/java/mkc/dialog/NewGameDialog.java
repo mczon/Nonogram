@@ -1,9 +1,8 @@
 package main.java.mkc.dialog;
 
-import org.controlsfx.dialog.Wizard;
-
 import javafx.scene.control.ButtonType;
 import main.java.mkc.guicomponents.GameBoardWizardFlow;
+import main.java.mkc.model.GameBoardWizard;
 import main.java.mkc.model.NonogramBoard;
 
 public class NewGameDialog {
@@ -15,7 +14,7 @@ public class NewGameDialog {
     }
 
     private static void initialize() {
-        final Wizard wizard = new Wizard();
+        final GameBoardWizard wizard = new GameBoardWizard();
         wizard.setTitle("Create new game board");
         wizard.setFlow(new GameBoardWizardFlow());
         wizard.showAndWait().ifPresent(result -> {
